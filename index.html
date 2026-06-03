@@ -1,23 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Portofolio Akbar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Akbar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.3);
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.project{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#94a3b8;
+}
+</style>
 </head>
+
 <body>
-    <h1>Halo, Saya Akbar</h1>
 
-    <h2>Tentang Saya</h2>
-    <p>Saya siswa TKJ yang tertarik pada Linux, AWS, dan Networking.</p>
+<nav>
+    <div class="logo">Akbar.</div>
 
-    <h2>Keahlian</h2>
     <ul>
-        <li>Linux</li>
-        <li>AWS Cloud</li>
-        <li>Networking</li>
-        <li>Web Server</li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#project">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
     </ul>
+</nav>
 
-    <h2>Kontak</h2>
-    <p>Email: emailkamu@gmail.com</p>
+<section class="hero">
+    <div>
+        <h1>Halo, Saya <span>Akbar</span></h1>
+
+        <p>
+            Siswa TKJ yang fokus pada Linux,
+            AWS Cloud Computing, Networking,
+            dan Web Server.
+        </p>
+
+        <a href="#contact" class="btn">Hubungi Saya</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">Tentang Saya</h2>
+
+    <div class="card">
+        <p>
+            Saya adalah siswa Teknik Komputer dan Jaringan (TKJ)
+            yang memiliki minat pada administrasi server,
+            cloud computing, Linux, dan jaringan komputer.
+            Saya senang mempelajari teknologi baru dan
+            mengembangkan kemampuan di bidang IT.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Keahlian</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🐧 Linux</h3>
+            <p>Instalasi dan administrasi server Linux.</p>
+        </div>
+
+        <div class="card">
+            <h3>☁ AWS Cloud</h3>
+            <p>EC2, VPC, Security Group dan Auto Scaling.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌐 Networking</h3>
+            <p>IP Addressing, Routing, Switching.</p>
+        </div>
+
+        <div class="card">
+            <h3>🖥 Web Server</h3>
+            <p>Apache dan Nginx di Linux.</p>
+        </div>
+    </div>
+</section>
+
+<section id="project">
+    <h2 class="section-title">Proyek Saya</h2>
+
+    <div class="project">
+        <h3>Deploy Web Server AWS EC2</h3>
+        <p>Membangun dan mengelola web server pada Amazon EC2.</p>
+    </div>
+
+    <div class="project">
+        <h3>Auto Scaling Group</h3>
+        <p>Konfigurasi ASG untuk meningkatkan ketersediaan server.</p>
+    </div>
+
+    <div class="project">
+        <h3>Linux Web Server</h3>
+        <p>Instalasi dan konfigurasi Apache pada Ubuntu Server.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Kontak</h2>
+
+    <div class="card">
+        <p>Email : emailkamu@gmail.com</p>
+        <br>
+        <p>GitHub : github.com/muhammadakbrafadilah-cell</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Akbar Portfolio | Built with GitHub Pages
+</footer>
+
 </body>
 </html>
